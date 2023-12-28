@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {{>header}}                    
+</head>
+ <body>
+    
+  
+   {{>navbar}}
+
+
+  <!-- main container -->
+
+    <div class="container-fluid main_header" >
+    <div class="row">
+       
+        <div class="col -md-6 col-12 mx-auto">
+          
+          <div class="main_content">
+            <form class="temp_form">
+              <input type="text" id="cityname" placeholder="Enter your city name" autocomplete="off">
+              <input type="submit" value="search" id="submitbtn">
+
+            </form>
+          </div>
+              
+              <div class="tempinformation">
+                 <div class="top_layer">
+                   <p id="day">manday</p>
+                   <p id="today_date">25 DEC</p>
+                 </div>
+               <div class="main_layer">
+                <p id="city_name">get Output Here</p>
+                <div class="middle_layer data_hide">
+                    <p id="temp"><span id="temp_val">0</span><sup>o</sup>C</p>
+                    <p id="temp_status"><i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                    {{!-- <i class="fa-solid fa-cloud" aria-hidden="true"></i> --}}
+                </div>
+               </div>
+              </div>
+        </div>
+     </div>
+   </div>
+   
+         
+   <!-- footerr code -->
+    
+   <footer>
+   {{>footer}}
+   </footer>
+
+
+  <script src="js/main.js"></script>
+  <script>
+  const day = document.getElementById('day');
+  const today_date= document.getElementById('today_date');
+
+      const getCurrentDay = () => {
+        var weekday = new Array(7);
+        weekday[0] = "sunday";
+        weekday[1] = "moanday";
+        weekday[2] = "tuesday";
+        weekday[3] = "wednesday";
+        weekday[4] = "thursday";
+        weekday[5] = "friday";
+        weekday[6] = "saturday";
+
+        let currentTime = new Date();
+        let day = weekday[currentTime.getDay()];
+        return day;
+      };
+
+      const getCurrentTime = () => {
+        var months = [
+          "jan",
+          "feb",
+          "mar",
+          "apr",
+          "may",
+          "jun",
+          "july",
+          "agu",
+          "setp",
+          "oct",
+          "nav",
+          "dec",
+        ];
+
+        var now = new Date();
+        var month = months[now.getMonth()];
+        var day = now.getDate();
+
+        let hours = now.getHours();
+        let mins = now.getMinutes();
+
+        let perios = "am";
+
+        if (hours > 11) {
+          perios = "pm";
+          if (hours > 12) hours -= 12;
+        }
+        if (mins < 10) {
+          mins = "0" + mins;
+        }
+
+        return `${month} ${day}  |    ${hours} : ${mins} ${perios}`;
+        // console.log(month + "/" + day);
+      };
+
+      curdate.innerHTML = getCurrentDay() + "  |  " + getCurrentTime();
+ getCurrentDay();
+
+  </script>
+</body>
+</html>

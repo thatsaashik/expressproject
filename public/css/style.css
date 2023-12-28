@@ -1,0 +1,259 @@
+h1{
+ color: red;
+}
+  /* @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,200;0,8..30,300;1,8..30,100&display=swap'); */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+ :root{
+    --main-bg:#1e272e;
+    --main-bg:#94d5f9;
+ }
+ body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+html{
+    font-size: 82%;
+}
+.main_menu{
+    background-color: var(--main-bg);
+    
+  }
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 0.5rem 0;
+
+}
+li{
+  margin-left: 20px;
+
+}
+a{
+  color: #fff;
+  font-size: 1.3rem;
+
+
+}
+.navbar-toggler{
+  background-color: rgb(0, 255, 8);
+ }
+ .fa-snowflake{
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var((--main-bg));
+
+}
+.main_header_left{
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_header_right{
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  font-size: 2rem;
+}
+h1{
+  margin:  1rem 0 4rem 0;
+  text-transform: capitalize;
+
+}
+span{
+  color: var(--main-bg);
+}
+button{
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 15px;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+  background-color: black;
+  transition: 0.4s ease-in;
+  color: rgb(255, 255, 255);
+
+
+}
+button:hover{
+  box-shadow: 0 8px 5px -1px var(--main-bg);
+}
+footer{
+     width: 100%;
+     background-color:  var(--main-bg);
+     margin-top: auto;
+
+}
+footer p{
+     margin: 0;
+     text-align: center;
+     color: #fff;
+     line-height: 4rem;
+     font-size: 1.3rem;
+
+}
+@media(max-width:700px){
+  .main_header_left{
+  height: auto;
+  margin: 5rem 0;
+
+}
+.main_header_right{
+  height: auto;
+  margin-top: 3rem;
+}
+
+}
+/* weather bar style */
+
+.tempinformation{
+  width: 33rem;
+  margin: auto;
+  margin-bottom: 80px;
+  margin-top: 3px;
+
+
+  height: 24rem;
+  background-color: #323544;
+  border-radius: 1rem;
+  /* padding: 1rem; */
+  font-family: sans-serif;
+
+
+}
+.top_layer{
+  width: 100%;
+  height: 100px;
+
+  background-color: #2d3032;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+ 
+}
+.top_layer p{
+  color: white;
+  font-weight: 300;
+  padding: 2rem;
+  font-size: 1.3rem;
+
+}
+.main_layer{
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      
+
+}
+.main_layer #city_name{
+  padding-bottom: 6rem ;
+  color: #bfc1c8;
+  font-weight: 300;
+  font-size: 2rem;
+
+
+}.main_layer .middle_layer{
+   display: flex;
+   justify-content: space-around;
+   color: #fff;
+
+}
+
+.main_layer   .meddle_layer  p ,
+.main_layer .meddle_layer .fa
+
+{
+  padding: 1rem 0;
+font-size: 9rem;
+font-weight: 800;
+
+
+}
+.main_layer  {
+  font-size: 7rem;
+  font-weight:1000;
+}
+.fa-solid fa-cloud{
+    color: #009ad8;
+    font-size: 5rem;
+}
+sup{
+  font-size: 2rem;
+  margin-top: -2rem;
+
+
+}
+/* .data_hide{
+  visibility: hidden;
+  transition: all 0.3s linear;
+
+} */
+
+/* temerature form seacrh */
+
+.main_content{
+  height: 100px;
+  width: 80%;
+}
+
+
+.temp_form{
+   width: 80%;
+   position: relative;
+   margin: 2rem auto;
+   margin-left: 240px;
+
+
+}
+input[type="text"]{
+   width: 100%;
+   padding: 15px;
+   background: #1e202b;
+   color: white;
+   outline: none;
+   border: none;
+   font-size: 1.3rem;
+   border-radius: 3rem;
+
+
+}
+::placeholder{
+  color: #bfc1c8;
+
+}
+.temp_form input[type="submit"]{
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   bottom: 5px;
+   border: none;
+   background: #009ad8;
+   padding: 0 3rem;
+   border-radius: 3rem;
+   color: white;
+   font-size: 1.3rem;
+
+}
+.temp_form input[type="submit"]:hover{
+   color: #009ad8;
+   background: #fff;
+   
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {{>header}}                    
+</head>
+ <body>
+    
+  
+   {{>navbar}}
+
+
+  <!-- main container -->
+
+  <div class="container-fluid main_header" >
+    <div class="row">
+       
+        <div class="col -md-6 col-12 main_header_left">
+           <p>wellcome to my weather app</p>
+           <h1>get the letest <span>weather</span> info of your city</h1>
+           <a href="/weather"><button>ChecK now</button></a>
+        </div>
+   
+
+       <div class="col-md-10 col-12 max-auto">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="w-50" src="b1.avif" alt="Los Angeles">
+              </div>
+              <div class="carousel-item">
+                <img class="w-50" src="b1.avif" alt="Chicago">
+              </div>
+              
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+
+        </div>
+     </div>
+   </div>
+  
+         
+   <!-- footerr code -->
+    
+   <footer>
+   {{>footer}}
+   </footer>
+
+
+     
+</body>
+</html>
